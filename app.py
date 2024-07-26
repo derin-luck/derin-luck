@@ -1,7 +1,6 @@
 import streamlit as st
 from transformers import pipeline
 
-# Initialize the sentiment analysis pipeline
 sentiment_pipeline = pipeline("sentiment-analysis")
 
 # Initialize chat history
