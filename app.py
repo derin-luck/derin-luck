@@ -1,18 +1,10 @@
-import streamlit as st
+from transformers import pipeline
 
-# Title of the app
-st.title("Welcome to your ai chatbot")
+# here, I'm telling my model that I am using the sentiment analysis pipeline.
+# The variable is sentiment_analysis while the stuff in the parentheses is the
+# actual tool we're using.
+sentiment_analysis = pipeline("sentiment-analysis")
 
-import re
-
-chatbot_response(user_inport):
-patterns = [
-    (r"hi|hello|hey","Hello! how can i help you today?"),
-    (r"my name is (\w+)","nice to meet you ,{}!)
-]
-
-for pattern,response in pattern:
-    match = re.search(pattern,user_inport,re.IGNORRECASE)
-    if match:
-        if callable(response):
-            return response(match)
+while True:
+  result = sentiment_analysis(input("Enter A Sentence"))
+  print(result)
