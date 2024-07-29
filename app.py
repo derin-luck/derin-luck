@@ -1,3 +1,5 @@
+install streamlit as st
+
 st.title("Welcome to My First Streamlit App")
 
 # Add a text input
